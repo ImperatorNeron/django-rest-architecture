@@ -1,0 +1,15 @@
+services:
+  main-app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: main_app
+    ports:
+      - "8000:8000"
+    command: "sh /entrypoint.sh"
+    depends_on:
+      - postgres
+    env_file:
+      - ../.env
+    volumes:
+      - ..:/app/
