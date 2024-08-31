@@ -22,9 +22,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     # First party
-    "core.apps.companies.apps.CompaniesConfig"
+    "core.apps.companies.apps.CompaniesConfig",
 ]
 
 MIDDLEWARE = [
