@@ -1,9 +1,15 @@
-from typing import TypeVar, Generic, Any
+from typing import (
+    Any,
+    Generic,
+    TypeVar,
+)
 
-from pydantic import Field
 from ninja import Schema
 
+from pydantic import Field
+
 from core.api.pagination import PaginationOut
+
 
 TData = TypeVar("TData")
 TListItem = TypeVar("TListItem")

@@ -1,5 +1,7 @@
 from pathlib import Path
+
 import environ
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
 
@@ -64,7 +66,7 @@ DATABASES = {
         "PASSWORD": env("POSTGRES_PASSWORD"),
         "HOST": env("POSTGRES_HOST"),
         "PORT": env("POSTGRES_PORT"),
-    }
+    },
 }
 
 AUTH_PASSWORD_VALIDATORS = [

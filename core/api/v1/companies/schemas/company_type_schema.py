@@ -1,9 +1,10 @@
 from pydantic import BaseModel
+
 from core.apps.companies.entities.company_types import CompanyTypeEntity
 
 
 class CompanyTypeSchema(BaseModel):
-    id: int
+    id: int  # noqa
     title: str
 
     @staticmethod

@@ -1,5 +1,7 @@
 from ninja import Router
+
 from .companies.handlers import router as companies_router
+
 
 router = Router()
 

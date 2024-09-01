@@ -1,4 +1,7 @@
-from abc import ABC, abstractmethod
+from abc import (
+    ABC,
+    abstractmethod,
+)
 from typing import Iterable
 
 from core.api.pagination import PaginationIn
@@ -18,7 +21,7 @@ class BaseCompanyTypeService(ABC):
 
 class ORMCompanyTypeService(BaseCompanyTypeService):
     def get_list_company_types(
-        self, pagination: PaginationIn
+        self, pagination: PaginationIn,
     ) -> Iterable[CompanyTypeEntity]:
         qs = CompanyTypeModel.objects.filter()[
             pagination.offset: pagination.offset + pagination.limit

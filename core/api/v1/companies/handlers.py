@@ -1,14 +1,23 @@
 from django.http import HttpRequest
-from ninja import Router, Query
+from ninja import (
+    Query,
+    Router,
+)
 
-from core.api.pagination import PaginationOut, PaginationIn
-from core.api.schemas import ListPaginatedResponse, ApiResponse
+from core.api.pagination import (
+    PaginationIn,
+    PaginationOut,
+)
+from core.api.schemas import (
+    ApiResponse,
+    ListPaginatedResponse,
+)
 from core.api.v1.companies.schemas.company_type_schema import CompanyTypeSchema
-
 from core.apps.companies.services.company_types import (
     BaseCompanyTypeService,
     ORMCompanyTypeService,
 )
+
 
 router = Router(tags=["Companies"])
 
@@ -30,5 +39,5 @@ def get_company_type_list_handler(
         data=ListPaginatedResponse(
             items=items,
             pagination=pagination_out,
-        )
+        ),
     )
